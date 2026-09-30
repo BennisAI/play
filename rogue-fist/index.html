@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#1b1230" />
+    <title>Rogue Fist</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='9' width='20' height='16' rx='5' fill='%23ff8a2a'/%3E%3Crect x='6' y='6' width='14' height='8' rx='4' fill='%23ffb366'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-BgARRdxE.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/CanvasPool-DecUtJxW.js">
+    <link rel="modulepreload" crossorigin href="./assets/Filter-DzecrWg_.js">
+    <link rel="modulepreload" crossorigin href="./assets/canvasUtils-CxYPZET9.js">
+    <link rel="modulepreload" crossorigin href="./assets/Cache-DDo62lBW.js">
+    <link rel="modulepreload" crossorigin href="./assets/GCManagedHash-Bz2ZMBJN.js">
+    <link rel="modulepreload" crossorigin href="./assets/RenderTargetSystem-CgUxHIsn.js">
+    <link rel="modulepreload" crossorigin href="./assets/getTextureBatchBindGroup-DBCrgHVb.js">
+    <link rel="modulepreload" crossorigin href="./assets/GraphicsContext-vm7TDg_M.js">
+    <link rel="modulepreload" crossorigin href="./assets/BufferResource-B-thlpip.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DU4bvbMK.css">
+  </head>
+  <body>
+    <div id="game"></div>
+    <div id="ui">
+      <div id="hud" hidden>
+        <div class="side p0">
+          <div class="name"></div>
+          <div class="bar"><div class="lag"></div><div class="fill"></div></div>
+          <div class="stun"><div class="fill"></div></div>
+          <div class="wins"></div>
+        </div>
+        <div class="timer">99</div>
+        <div class="side p1">
+          <div class="name"></div>
+          <div class="bar"><div class="lag"></div><div class="fill"></div></div>
+          <div class="stun"><div class="fill"></div></div>
+          <div class="wins"></div>
+        </div>
+        <div class="combo p0"></div>
+        <div class="combo p1"></div>
+      </div>
+      <div id="announce"></div>
+      <button id="pause" aria-label="Pause" hidden>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="12" width="7" height="24" rx="2" /><rect x="27" y="12" width="7" height="24" rx="2" /></svg>
+      </button>
+
+      <div id="touch" hidden>
+        <div class="stick-zone"><div class="stick"><div class="knob"></div></div></div>
+        <div class="buttons">
+          <button class="btn l" data-b="l" aria-label="Light">L</button>
+          <button class="btn h" data-b="h" aria-label="Heavy">H</button>
+          <button class="btn s1" data-b="s1" aria-label="Special 1">S1</button>
+          <button class="btn s2" data-b="s2" aria-label="Special 2">S2</button>
+        </div>
+      </div>
+
+      <div id="menu" class="screen">
+        <h1 class="logo"><span>ROGUE</span><span>FIST</span></h1>
+        <div class="pick">
+          <div class="label">Choose your fighter</div>
+          <div class="fighters">
+            <button class="fighter" data-char="jun"><span class="fname">JUN</span><span class="blurb">All-rounder</span></button>
+            <button class="fighter" data-char="brick"><span class="fname">BRICK</span><span class="blurb">Grappler</span></button>
+          </div>
+        </div>
+        <div class="levels">
+          <button class="level" data-level="easy">Easy</button>
+          <button class="level" data-level="normal">Normal</button>
+          <button class="level" data-level="hard">Hard</button>
+        </div>
+        <button id="start" class="big">Fight</button>
+        <div class="keys">Move: arrows / WASD · Light J · Heavy K · Special 1 U · Special 2 I · Down + Special for the other two specials</div>
+      </div>
+
+      <div id="paused" class="screen" hidden>
+        <div class="title">Paused</div>
+        <button id="resume" class="big">Resume</button>
+        <button id="quit" class="small">Quit to menu</button>
+        <div class="moves"></div>
+      </div>
+
+      <div id="over" class="screen" hidden>
+        <div class="title"></div>
+        <button id="rematch" class="big">Rematch</button>
+        <button id="tomenu" class="small">Menu</button>
+      </div>
+
+      <div id="rotate" hidden>Turn your phone sideways</div>
+    </div>
+  </body>
+</html>
