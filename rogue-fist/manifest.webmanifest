@@ -1,0 +1,10 @@
+{
+  "name": "Rogue Fist",
+  "short_name": "Rogue Fist",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#1b1230",
+  "theme_color": "#1b1230"
+}
