@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <title>Rogue Fist</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='9' width='20' height='16' rx='5' fill='%23ff8a2a'/%3E%3Crect x='6' y='6' width='14' height='8' rx='4' fill='%23ffb366'/%3E%3C/svg%3E" />
-    <script type="module" crossorigin src="./assets/index-Bkd9weY8.js"></script>
+    <script type="module" crossorigin src="./assets/index-CrN6Ofp3.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/CanvasPool-DecUtJxW.js">
     <link rel="modulepreload" crossorigin href="./assets/Filter-DzecrWg_.js">
     <link rel="modulepreload" crossorigin href="./assets/canvasUtils-CxYPZET9.js">
@@ -21,7 +21,7 @@
     <link rel="modulepreload" crossorigin href="./assets/getTextureBatchBindGroup-DBCrgHVb.js">
     <link rel="modulepreload" crossorigin href="./assets/GraphicsContext-vm7TDg_M.js">
     <link rel="modulepreload" crossorigin href="./assets/BufferResource-B-thlpip.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-DU4bvbMK.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-DuSIVUhc.css">
   </head>
   <body>
     <div id="game"></div>
@@ -63,30 +63,36 @@
         <div class="pick">
           <div class="label">Choose your fighter</div>
           <div class="fighters">
-            <button class="fighter" data-char="jun"><span class="fname">JUN</span><span class="blurb">All-rounder</span></button>
-            <button class="fighter" data-char="brick"><span class="fname">BRICK</span><span class="blurb">Grappler</span></button>
+            <button class="fighter nav" data-char="jun"><span class="fname">JUN</span><span class="blurb">All-rounder</span></button>
+            <button class="fighter nav" data-char="brick"><span class="fname">BRICK</span><span class="blurb">Grappler</span><span class="lock">Win a run to unlock for runs</span></button>
           </div>
         </div>
-        <div class="levels">
-          <button class="level" data-level="easy">Easy</button>
-          <button class="level" data-level="normal">Normal</button>
-          <button class="level" data-level="hard">Hard</button>
+        <div class="modes">
+          <button id="new-run" class="big nav primary">New run</button>
+          <button id="continue-run" class="big alt nav" hidden>Continue run</button>
         </div>
-        <button id="start" class="big">Fight</button>
+        <div class="quick">
+          <span class="label">Quick fight</span>
+          <button class="level nav" data-level="easy">Easy</button>
+          <button class="level nav" data-level="normal">Normal</button>
+          <button class="level nav" data-level="hard">Hard</button>
+        </div>
         <div class="keys">Move: arrows / WASD · Light J · Heavy K · Special 1 U · Special 2 I · Down + Special for the other two specials · Gamepad (PlayStation / Xbox): □/X Light, ✕/A Heavy, △/Y Special 1, ○/B Special 2, Start pauses</div>
       </div>
 
+      <div id="run" class="screen run" hidden></div>
+
       <div id="paused" class="screen" hidden>
         <div class="title">Paused</div>
-        <button id="resume" class="big">Resume</button>
-        <button id="quit" class="small">Quit to menu</button>
+        <button id="resume" class="big nav">Resume</button>
+        <button id="quit" class="small nav">Quit to menu</button>
         <div class="moves"></div>
       </div>
 
       <div id="over" class="screen" hidden>
         <div class="title"></div>
-        <button id="rematch" class="big">Rematch</button>
-        <button id="tomenu" class="small">Menu</button>
+        <button id="rematch" class="big nav">Rematch</button>
+        <button id="tomenu" class="small nav">Menu</button>
       </div>
 
       <div id="rotate" hidden>Turn your phone sideways</div>
